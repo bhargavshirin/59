@@ -1,0 +1,111 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+
+    <h3> Create a New Listing</h3>
+    <form method="POST" action="/listings" novalidate class="need-validation">
+        <div class="mb-3">
+        <lable for="title" class="'form-label">Title</lable>
+        <input 
+        name="listing[title]" 
+        placeholder="enter title" 
+        type="text" 
+        class="form-control"
+            required
+        />
+        <div class="valid-feedback">Title looks good!</div>
+        </div>
+     </div class="mb-3">
+    <lable for="description" class="form-label">Description</lable>
+        <textarea 
+        name="listing[description]" 
+        class="form-control"
+        required
+        ></textarea> 
+     <div class="invalid-feedback">Please enter a short Descirption</div>
+    </div>
+
+<div class="mb-3">
+    <lable for="image" class="form-label">Image Link</lable>
+        <input 
+        name="listing[imageUrl]" 
+        placeholder="enter image link" 
+        type="text" 
+        class="form-control"
+        />
+    </div>
+
+    <div class="row">
+    <div clas="mb-3 col-md-4">
+        <lable for="price" class="form-label">Price</lable>
+        <input 
+        name="listing[price]" 
+        placeholder="1500" 
+        class="form-control"
+        required    
+        />
+    <div class="invalid-feedback">Please enter a valid price</div>
+    </div>
+
+        <div clas="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input 
+            name="listing[country]" 
+            placeholder="India" 
+            type="text"
+            class="form-control"
+            required
+        />
+        <div class="invalid-feedback">Location should be valid</div>    
+    </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input 
+        name="listing[location]" 
+        placeholder="Tohana, Fatehabad (Haryana)" 
+        type="text"
+        class="form-control"
+        required
+        />
+        <div class="invalid-feedback">Location should be valid</div>
+    </div>
+
+        
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+        
+    </form>
+</div>
+</div>
+
+<script src="/js/script.js"></script>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    </head>
+<body>
+    <h3> Create a New Listing</h3>
+    <form method="POST" action="/listings">
+        <input name="listing[title]" placeholder="enter title" type="text"/>
+        <br />
+        <textarea name="listing[description]" placeholder="enter description"></textarea> 
+                <br />
+        <input name="listing[image]" placeholder="enter image link " type="text"/>
+        <br />
+        <input name="listing[price]" placeholder="enter price" type="number"/>
+        <br />
+        <input name="listing[country]" placeholder="enter country" type="text"/>
+        <br />
+        <input name="listing[location]" placeholder="enter location" type="text"/>
+        <br />
+       <button>Add</button> 
+    </form>    
+</body>
+</html> -->
